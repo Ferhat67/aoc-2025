@@ -1,5 +1,6 @@
 #![allow(unused_variables)]
 mod day01;
+mod day02;
 use std::env;
 
 fn main() {
@@ -15,7 +16,8 @@ fn main() {
 
     match day {
         1 => day01::day01(),
-        2..=25 => println!("Day {} not implemented yet", day),
+        2 => day02::day02(),
+        3..=25 => println!("Day {} not implemented yet", day),
         _ => println!("Invalid day: {}", day),
     }
 }
