@@ -3,8 +3,10 @@ mod day01;
 mod day02;
 mod day03;
 mod day04;
+mod day05;
 
 use std::env;
+use chrono::Datelike;
 
 fn main() {
     let args: Vec<String> = env::args().collect();
@@ -14,7 +16,7 @@ fn main() {
             std::process::exit(1);
         })
     } else {
-        1
+        chrono::Utc::now().day() as i32
     };
 
     match day {
@@ -22,7 +24,8 @@ fn main() {
         2 => day02::day02(),
         3 => day03::day03(),
         4 => day04::day04(),
-        5..=25 => println!("Day {} not implemented yet", day),
+        5 => day05::day05(),
+        6..=25 => println!("Day {} not implemented yet", day),
         _ => println!("Invalid day: {}", day),
     }
 }
