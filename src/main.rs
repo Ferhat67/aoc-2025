@@ -4,6 +4,7 @@ mod day02;
 mod day03;
 mod day04;
 mod day05;
+mod day06;
 
 use std::env;
 use chrono::Datelike;
@@ -25,7 +26,8 @@ fn main() {
         3 => day03::day03(),
         4 => day04::day04(),
         5 => day05::day05(),
-        6..=25 => println!("Day {} not implemented yet", day),
+        6 => day06::day06(),
+        7..=25 => println!("Day {} not implemented yet", day),
         _ => println!("Invalid day: {}", day),
     }
 }
